@@ -1,0 +1,26 @@
+<div fxLayoutAlign="center center" style="height: 100vh;">
+    <mat-card fxLayout fxLayoutAlign="center center">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-card-title>Login</mat-card-title>
+        <mat-card-content>
+                <p>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Username</mat-label>
+                        <input matInput formControlName="username">
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Password</mat-label>
+                        <input type="password" matInput formControlName="password">
+                    </mat-form-field>
+                </p>
+
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary"type="submit">Login</button>&nbsp;
+            <a routerLink="../register">Register Here</a>
+        </mat-card-actions>
+        </form>
+    </mat-card>
+</div>

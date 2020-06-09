@@ -1,0 +1,42 @@
+<div fxLayout fxLayoutAlign="center center" style="height: 100vh;">
+    <mat-card fxLayout fxLayoutAlign="center center">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-card-title>Registration</mat-card-title>
+        <mat-card-content>
+
+                <p>
+                    <mat-form-field appearance="fill">
+                        <mat-label>First Name</mat-label>
+                        <input matInput formControlName="firstName">
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput formControlName="lastName">
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Username</mat-label>
+                        <input matInput formControlName="username">
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Password</mat-label>
+                        <input type="password" matInput formControlName="password">
+                        <mat-error *ngIf="submitted && f.password.errors">
+                            Password must have 6 characters
+                        </mat-error>
+                    </mat-form-field>
+                </p>
+
+        </mat-card-content>
+        <mat-card-actions>
+            <a routerLink="../login">Back to Login</a>&nbsp;
+            <button mat-raised-button color="primary"type="submit">Register</button>
+        </mat-card-actions>
+        </form>
+    </mat-card>
+</div>
