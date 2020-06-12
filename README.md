@@ -1,10 +1,10 @@
-# Angular 9 with Material Design as Feature module / Micro App
+# Angular 9 with Material Design as Micro App
 
 ## Idea
 
-The idea of Micro APP with Angular 9 is to have a self contained Angular Material Module as a Micro App that can easily be included in any project without or barely any modifications. Thus the idea of MicroApp. 
+The idea of Micro APP with Angular 9 is to have a self contained Angular Material Feature Module as a Micro App that can easily be included in any project without or barely any modifications.
 
-`This "Micro App" is only a demo app based on the idea creating a Micro App. It may be used in real application with slight modifications, but it's main purpose is to prove to myself that such a thing is even possible and usable.`
+`This "Micro App" is only a demo app based on the idea creating a Micro App. It may be used in real application with slight modifications, but it's main purpose is to prove that such a thing is even possible.`
 
 ## Contents
 
