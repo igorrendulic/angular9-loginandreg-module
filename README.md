@@ -88,7 +88,7 @@ in const routes:Routes = [] add:
 
 Now visit login and registration forms: `http://localhost:4200/user/login`
 
-### Update all submodiles
+### Update all submodules
 
 ```bash
 git submodule foreach git pull origin master
