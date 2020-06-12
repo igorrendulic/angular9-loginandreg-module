@@ -65,10 +65,12 @@ imports: [
   ],
 ```
 
-In the providers section add:
+In the providers section add your API url and the route to redirect after successfull login/registration:
 ```javascript
 providers: [CookieService, 
-  {provide: "ApiUrl", useValue: "https://enrz9d80zy259.x.pipedream.net"}],
+  {provide: "ApiUrl", useValue: "https://enrz9d80zy259.x.pipedream.net"},
+  {provide: "afterLoginUrl", useValue: "/dash"}
+],
 ```
 where "https://enrz9d80zy259.x.pipedream.net" is your servers endpoint url.
 
