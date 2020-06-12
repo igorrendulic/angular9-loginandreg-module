@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from '../models/user';
 
@@ -17,7 +17,7 @@ export class RegisterComponent implements OnInit {
   submitted:Boolean = false
 
   constructor(private _formBuilder:FormBuilder, private api:ApiService, private cookie:CookieService, 
-    private router:Router) { }
+    private router:Router, @Inject("afterLoginUrl") private afterLoginUrl:string ) { }
 
   ngOnInit(): void {
     this.loginForm = this._formBuilder.group({
@@ -46,7 +46,7 @@ export class RegisterComponent implements OnInit {
       let date = new Date();
       date.setTime(date.getTime() + (6 * 24 * 60 * 60 * 1000));
       this.cookie.set("auth", "test_" + user.username, date, "/");
-      this.router.navigate(['../login'])
+      this.router.navigate([this.afterLoginUrl])
     });
   }
 
